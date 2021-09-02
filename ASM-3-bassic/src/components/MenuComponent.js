@@ -37,7 +37,7 @@ class Menu extends Component  {
 
     // phương thức lọc input value trong staffs nhận value cả chữ hoa và chữ thường
     searchName(event) {
-        const result = this.props.staffs.filter(s => s.name.toLowerCase().match(this.state.name));
+        const result = this.props.staffs.filter(s => s.name.toLowerCase().match(this.state.name.toLowerCase()));
         this.setState({
             staffs: result,
             name: this.name.value
